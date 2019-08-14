@@ -1,7 +1,5 @@
 .PHONY: test
 
-all: test build
-
 test:
 	go test -v --race ./...
 
@@ -15,3 +13,6 @@ build_arm:
 
 build_arm64:
 	GCO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -v -o nft_exporter.arm64 ./cmd/nft_exporter.go
+
+clean:
+	rm nft_exporter*

@@ -50,8 +50,8 @@ func (c config) Metrics(w http.ResponseWriter, r *http.Request) {
 
 	// Iterate over the metrics and generate prometheus readable ones out of it
 	for _, metric := range e {
-		generated += fmt.Sprintf("%s_bytes %d\n", metric.Name, metric.Bytes)
-		generated += fmt.Sprintf("%s_packets %d\n", metric.Name, metric.Packets)
+		generated += fmt.Sprintf("nft_counter_bytes{comment=\"%s\"} %d\n", metric.Name, metric.Bytes)
+		generated += fmt.Sprintf("nft_counter_packets{comment=\"%s\"} %d\n", metric.Name, metric.Packets)
 	}
 
 	klog.Infof("Exported %d counters", len(e))

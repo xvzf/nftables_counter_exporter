@@ -8,6 +8,13 @@ If you want to export a metric, add a counter it like this: `counter comment "th
 The counter can be nested in a rule as the exporter is using a versatile regex to also cover such cases.
 
 
+## Usage
+> **NOTE** Default bind port is 9333
+
+```
+./nft_exporter.amd64 --nft /path/to/nftdumop.jsonlike --bind ":9333"
+```
+
 ## Best practices
 As the `nft` command has to be executed as root as root (which I * do not* recommend for running the exporter), I suggest a script running in the background and point the exporter to the export path.
 ```sh

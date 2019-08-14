@@ -19,7 +19,7 @@ func main() {
 	http.HandleFunc("/metrics", e.Metrics)
 	klog.Infof("Listening on %s, nftables dump path is %s", *bind, *nftPath)
 	if err := http.ListenAndServe(*bind, nil); err != nil {
-		klog.Fatalln("Could not listen on %s", *bind)
+		klog.Fatalf("Could not listen on %s", *bind)
 	}
 
 }

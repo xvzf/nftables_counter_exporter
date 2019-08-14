@@ -1,3 +1,5 @@
+[![Build Status](https://cloud.drone.io/api/badges/xvzf/nftables_counter_exporter/status.svg)](https://cloud.drone.io/xvzf/nftables_counter_exporter)
+
 # nftables counter exporter
 > Provides a prometheus exporter for nftables (counters)
 

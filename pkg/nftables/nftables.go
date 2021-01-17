@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	extract = *regexp.MustCompile(`(?s)counter packets (\d+) bytes (\d+) comment "(.*)"`)
+	extract = *regexp.MustCompile(`(?s)counter packets (\d+) bytes (\d+)[\s\w]*comment "(.*)"`)
 )
 
 // Counter contians the statistic values of a nftabless counter
